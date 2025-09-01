@@ -1,7 +1,7 @@
 "use client";
 
 import Button from "@/components/Button";
-import Image from "next/image";
+// import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -35,14 +35,15 @@ const DashboardPage = () => {
 
   return (
     <div className="max-w-md w-full mx-auto mt-20 p-6 border rounded-md shadow-md text-center sm:p-8">
-      <Image
+      <img
         src={user.picture}
         alt={user.name}
-        width={80}
-        height={80}
-        className="rounded-full mx-auto mb-4"
+        className="w-20 h-20 rounded-full mx-auto mb-4"
       />
-      <h1 className="text-2xl sm:text-3xl font-bold mb-2">خوش اومدین {user.name}</h1>
+
+      <h1 className="text-2xl sm:text-3xl font-bold mb-2">
+        خوش اومدین {user.name}
+      </h1>
       <p className="mb-6 text-gray-600">{user.email}</p>
       <Button onClick={handleLogout}> خروج </Button>
     </div>
